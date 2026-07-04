@@ -24,11 +24,14 @@ Ogni cartella-materia contiene script numerati (`01_...`, `02_...`) più un
 
 ## Setup
 
-Consiglio un ambiente virtuale dedicato a questa parte di codice:
+Questa parte di codice usa un **ambiente virtuale dedicato** (`.venv-quantum`),
+separato dal `.venv` dell'assistente RAG. Motivo: Qiskit 2.x richiede
+`numpy>=2.0`, mentre lo stack RAG (langchain) richiede `numpy<2.0`. Tenerli
+separati evita conflitti.
 
 ```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
+python -m venv .venv-quantum
+.\.venv-quantum\Scripts\Activate.ps1
 pip install -r quantum/requirements.txt
 ```
 
@@ -38,7 +41,7 @@ pip install -r quantum/requirements.txt
 
 ## Come eseguire uno script
 
-Dalla cartella radice del progetto:
+Dalla cartella radice del progetto, con `.venv-quantum` attivo:
 
 ```powershell
 python quantum/01_algebra_calcolo/01_gate_come_matrici_unitarie.py
@@ -48,6 +51,9 @@ python quantum/04_elettronica_quantistica/01_oscillazioni_di_rabi.py
 ```
 
 I grafici vengono salvati nella sottocartella `output/` della materia.
+
+> Su Windows, se il disegno del circuito Qiskit mostra caratteri strani, imposta
+> `PYTHONIOENCODING=utf-8` prima di lanciare (gli script provano gia' a farlo da soli).
 
 ## Workflow "un commit al giorno"
 

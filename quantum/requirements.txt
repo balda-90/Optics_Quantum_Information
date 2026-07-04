@@ -5,8 +5,11 @@
 #   pip install -r quantum/requirements.txt
 
 # Core scientifico
-numpy>=1.26,<2.0
-scipy>=1.11
+# Nota: Qiskit 2.x richiede numpy>=2.0, incompatibile con lo stack RAG
+# (langchain) del progetto principale. Per questo il codice quantum vive in
+# un venv DEDICATO (vedi README): .venv-quantum
+numpy>=2.0
+scipy>=1.13
 matplotlib>=3.8
 
 # Quantum computing (IBM Qiskit)
