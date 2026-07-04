@@ -1,16 +1,16 @@
 """
-Materia: 3 - Introduzione alla Meccanica Quantistica
-Tema del giorno: entanglement e stato di Bell.
+Subject: 3 - Introduction to Quantum Mechanics
+Topic of the day: entanglement and the Bell state.
 
-Idea: costruiamo lo stato di Bell |Phi+> = (|00> + |11>)/sqrt(2) con un
-circuito H + CNOT e misuriamo le correlazioni. Vediamo che i due qubit,
-pur essendo casuali singolarmente, danno SEMPRE esiti uguali: e' entanglement.
+Idea: we build the Bell state |Phi+> = (|00> + |11>)/sqrt(2) with an
+H + CNOT circuit and measure the correlations. We see that the two qubits,
+while individually random, ALWAYS yield equal outcomes: that is entanglement.
 
-Se qiskit e' installato usa il simulatore Aer; altrimenti fa lo stesso conto
-con numpy, cosi' lo script gira comunque.
+If qiskit is installed it uses the Aer simulator; otherwise it does the same
+computation with numpy, so the script runs regardless.
 
-Esecuzione:
-    python quantum/03_meccanica_quantistica/01_stato_di_bell_entanglement.py
+Run:
+    python quantum/03_quantum_mechanics/01_bell_state_entanglement.py
 """
 from __future__ import annotations
 
@@ -19,8 +19,8 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-# La console di Windows usa spesso cp1252, che non gestisce i caratteri del
-# disegno dei circuiti Qiskit. Forziamo UTF-8 sull'output quando possibile.
+# The Windows console often uses cp1252, which cannot render the box-drawing
+# characters of Qiskit circuit diagrams. Force UTF-8 on output when possible.
 try:
     sys.stdout.reconfigure(encoding="utf-8")
 except (AttributeError, ValueError):
@@ -32,13 +32,13 @@ from _common import ket0, HADAMARD, banner
 
 
 def bell_with_numpy(shots: int = 1000) -> dict[str, int]:
-    """Costruisce |Phi+> con algebra lineare e campiona le misure."""
+    """Build |Phi+> with linear algebra and sample the measurements."""
     # |00>
     state = np.kron(ket0, ket0)
-    # H sul primo qubit
+    # H on the first qubit
     H_I = np.kron(HADAMARD, np.eye(2))
     state = H_I @ state
-    # CNOT (controllo = qubit 0, target = qubit 1)
+    # CNOT (control = qubit 0, target = qubit 1)
     cnot = np.array(
         [[1, 0, 0, 0],
          [0, 1, 0, 0],
@@ -58,7 +58,7 @@ def bell_with_numpy(shots: int = 1000) -> dict[str, int]:
 
 
 def qiskit_available() -> bool:
-    """True se qiskit e qiskit-aer sono importabili."""
+    """True if qiskit and qiskit-aer can be imported."""
     try:
         import qiskit  # noqa: F401
         import qiskit_aer  # noqa: F401
@@ -68,7 +68,7 @@ def qiskit_available() -> bool:
 
 
 def bell_with_qiskit(shots: int = 1000):
-    """Stesso stato di Bell, ma con un vero circuito Qiskit + Aer."""
+    """Same Bell state, but with a real Qiskit circuit + Aer."""
     from qiskit import QuantumCircuit
     from qiskit_aer import AerSimulator
 
@@ -84,8 +84,8 @@ def bell_with_qiskit(shots: int = 1000):
 
 def draw_circuit(qc) -> None:
     """
-    Disegna il circuito. Su Windows il disegno a box puo' fallire per l'encoding
-    della console: in quel caso ripiega su un disegno in caratteri ASCII.
+    Draw the circuit. On Windows the box drawing may fail due to the console
+    encoding: in that case fall back to a pure-ASCII rendering.
     """
     try:
         print(qc.draw(output="text"))
@@ -95,26 +95,26 @@ def draw_circuit(qc) -> None:
 
 
 def main() -> None:
-    banner("Meccanica quantistica -> Stato di Bell")
+    banner("Quantum mechanics -> Bell state")
     shots = 1000
 
     if qiskit_available():
         counts, qc = bell_with_qiskit(shots)
-        print("\n[Qiskit] Circuito:")
+        print("\n[Qiskit] Circuit:")
         draw_circuit(qc)
         engine = "Qiskit + Aer"
     else:
-        print("\n[Info] Qiskit non installato, uso numpy. Installa con: pip install qiskit qiskit-aer")
+        print("\n[Info] Qiskit not installed, using numpy. Install with: pip install qiskit qiskit-aer")
         counts = bell_with_numpy(shots)
         engine = "numpy"
 
-    print(f"\n[{engine}] Conteggi su {shots} misure:")
+    print(f"\n[{engine}] Counts over {shots} measurements:")
     for label, n in counts.items():
         print(f"    |{label}>: {n:>4}  ({100 * n / shots:.1f}%)")
 
     same = counts.get("00", 0) + counts.get("11", 0)
-    print(f"\nEsiti correlati (00 o 11): {100 * same / shots:.1f}%  -> atteso ~100% per |Phi+>.")
-    print("\nFatto. Prossimo passo: verificare la disuguaglianza di Bell (CHSH).")
+    print(f"\nCorrelated outcomes (00 or 11): {100 * same / shots:.1f}%  -> expected ~100% for |Phi+>.")
+    print("\nDone. Next step: check Bell's inequality (CHSH).")
 
 
 if __name__ == "__main__":

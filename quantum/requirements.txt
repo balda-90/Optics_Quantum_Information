@@ -1,13 +1,13 @@
-# Stack per i mini-progetti di quantum computing del master.
-# Installazione consigliata in un venv dedicato:
-#   python -m venv .venv
-#   .venv\Scripts\Activate.ps1
+# Stack for the master's quantum-computing mini-projects.
+# Recommended install in a dedicated venv:
+#   python -m venv .venv-quantum
+#   .venv-quantum\Scripts\Activate.ps1
 #   pip install -r quantum/requirements.txt
 
-# Core scientifico
-# Nota: Qiskit 2.x richiede numpy>=2.0, incompatibile con lo stack RAG
-# (langchain) del progetto principale. Per questo il codice quantum vive in
-# un venv DEDICATO (vedi README): .venv-quantum
+# Scientific core
+# Note: Qiskit 2.x requires numpy>=2.0, which is incompatible with the RAG
+# stack (langchain) of the main project. That is why the quantum code lives in
+# a DEDICATED venv (see README): .venv-quantum
 numpy>=2.0
 scipy>=1.13
 matplotlib>=3.8
@@ -16,5 +16,5 @@ matplotlib>=3.8
 qiskit>=1.2
 qiskit-aer>=0.15
 
-# Notebook (opzionale, utile per esplorare)
+# Notebook (optional, handy for exploration)
 jupyter>=1.0

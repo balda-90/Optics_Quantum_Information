@@ -1,33 +1,33 @@
 # Optics & Quantum Information — Coding Journal
 
-Codice sviluppato durante il master in **Ottica e Informazione Quantistica** (Sapienza, Roma).
-L'obiettivo è collegare, materia per materia, gli argomenti del corso con il
-**quantum computing** attraverso piccoli script eseguibili — uno al giorno, per
-costruire un portfolio pubblico e la mia personal brand.
+Code developed during my master's in **Optics and Quantum Information**
+(Sapienza University of Rome). The goal is to connect, subject by subject, the
+course topics with **quantum computing** through small runnable scripts — one a
+day — to build a public portfolio and my personal brand.
 
 Repo: https://github.com/balda-90/Optics_Quantum_Information
 
-## Struttura
+## Structure
 
 ```
 quantum/
-├── _common/              # utility condivise (algebra, sfera di Bloch, plotting)
-├── 01_algebra_calcolo/   # Fondamenti di algebra e calcolo matematico
-├── 02_ottica/            # Ottica
-├── 03_meccanica_quantistica/  # Introduzione alla Meccanica Quantistica
-├── 04_elettronica_quantistica/ # Elettronica quantistica
+├── _common/                # shared utilities (algebra, Bloch sphere, plotting)
+├── 01_math_foundations/    # Mathematical foundations (algebra & calculus)
+├── 02_optics/              # Optics
+├── 03_quantum_mechanics/   # Introduction to Quantum Mechanics
+├── 04_quantum_electronics/ # Quantum electronics
 └── requirements.txt
 ```
 
-Ogni cartella-materia contiene script numerati (`01_...`, `02_...`) più un
-`README.md` che tiene traccia di cosa ho imparato/implementato ogni giorno.
+Each subject folder contains numbered scripts (`01_...`, `02_...`) plus a
+`README.md` that tracks what I learned/implemented each day.
 
 ## Setup
 
-Questa parte di codice usa un **ambiente virtuale dedicato** (`.venv-quantum`),
-separato dal `.venv` dell'assistente RAG. Motivo: Qiskit 2.x richiede
-`numpy>=2.0`, mentre lo stack RAG (langchain) richiede `numpy<2.0`. Tenerli
-separati evita conflitti.
+This code uses a **dedicated virtual environment** (`.venv-quantum`), separate
+from the RAG assistant's `.venv`. Reason: Qiskit 2.x requires `numpy>=2.0`,
+while the RAG stack (langchain) requires `numpy<2.0`. Keeping them separate
+avoids conflicts.
 
 ```powershell
 python -m venv .venv-quantum
@@ -35,43 +35,43 @@ python -m venv .venv-quantum
 pip install -r quantum/requirements.txt
 ```
 
-> Nota: `numpy`, `scipy` e `matplotlib` bastano per la maggior parte degli script.
-> `qiskit` serve solo dove indicato (es. circuiti veri e simulatore Aer). Gli script
-> che possono, hanno un fallback in numpy e girano anche senza qiskit.
+> Note: `numpy`, `scipy` and `matplotlib` are enough for most scripts.
+> `qiskit` is only needed where indicated (e.g. real circuits and the Aer
+> simulator). Scripts that can, fall back to numpy and run without qiskit.
 
-## Come eseguire uno script
+## How to run a script
 
-Dalla cartella radice del progetto, con `.venv-quantum` attivo:
+From the project root, with `.venv-quantum` active:
 
 ```powershell
-python quantum/01_algebra_calcolo/01_gate_come_matrici_unitarie.py
-python quantum/02_ottica/01_polarizzazione_come_qubit.py
-python quantum/03_meccanica_quantistica/01_stato_di_bell_entanglement.py
-python quantum/04_elettronica_quantistica/01_oscillazioni_di_rabi.py
+python quantum/01_math_foundations/01_gates_as_unitary_matrices.py
+python quantum/02_optics/01_polarization_as_qubit.py
+python quantum/03_quantum_mechanics/01_bell_state_entanglement.py
+python quantum/04_quantum_electronics/01_rabi_oscillations.py
 ```
 
-I grafici vengono salvati nella sottocartella `output/` della materia.
+Plots are saved in the subject's `output/` subfolder.
 
-> Su Windows, se il disegno del circuito Qiskit mostra caratteri strani, imposta
-> `PYTHONIOENCODING=utf-8` prima di lanciare (gli script provano gia' a farlo da soli).
+> On Windows, if the Qiskit circuit drawing shows odd characters, set
+> `PYTHONIOENCODING=utf-8` before running (the scripts already try to do this).
 
-## Workflow "un commit al giorno"
+## "One commit a day" workflow
 
-1. Scegli la materia del giorno.
-2. Crea un nuovo script numerato (es. `02_...`) partendo dal "Prossimo passo"
-   suggerito in fondo allo script precedente.
-3. Esegui e verifica l'output.
-4. Aggiorna il `README.md` della materia con una riga sul lavoro svolto.
-5. Commit con messaggio chiaro, ad esempio:
+1. Pick the subject of the day.
+2. Create a new numbered script (e.g. `02_...`) starting from the "Next step"
+   suggested at the bottom of the previous script.
+3. Run it and check the output.
+4. Update the subject's `README.md` with a line about the work done.
+5. Commit with a clear message, for example:
 
 ```bash
 git add quantum/
-git commit -m "ottica: beam splitter come gate di Hadamard"
+git commit -m "optics: beam splitter as a Hadamard gate"
 git push
 ```
 
-## Cosa NON viene pubblicato
+## What is NOT published
 
-Il materiale dei professori in `data/` e l'indice RAG in `agents/index/` sono
-esclusi via `.gitignore` (contenuti potenzialmente protetti da copyright).
-Su GitHub va solo **il mio codice**.
+The professors' material in `data/` and the RAG index in `agents/index/` are
+excluded via `.gitignore` (potentially copyrighted content). Only **my code**
+goes on GitHub.
