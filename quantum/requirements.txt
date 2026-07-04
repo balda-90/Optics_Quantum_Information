@@ -1,0 +1,17 @@
+# Stack per i mini-progetti di quantum computing del master.
+# Installazione consigliata in un venv dedicato:
+#   python -m venv .venv
+#   .venv\Scripts\Activate.ps1
+#   pip install -r quantum/requirements.txt
+
+# Core scientifico
+numpy>=1.26,<2.0
+scipy>=1.11
+matplotlib>=3.8
+
+# Quantum computing (IBM Qiskit)
+qiskit>=1.2
+qiskit-aer>=0.15
+
+# Notebook (opzionale, utile per esplorare)
+jupyter>=1.0

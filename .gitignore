@@ -1,0 +1,36 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# === Virtual environments ===
+.venv/
+venv/
+env/
+
+# === Secrets / config ===
+.env
+.env.*
+!.env.example
+
+# === Course material (do NOT publish professors' copyrighted files) ===
+data/
+
+# === RAG / vector index artifacts ===
+agents/index/
+*.sqlite3
+chroma.sqlite3
+
+# === Generated outputs (plots, exports) ===
+quantum/**/output/
+*.png
+!quantum/**/docs/*.png
+
+# === OS / editor junk ===
+desktop.ini
+Thumbs.db
+.DS_Store
+*.url
+.vscode/
+.idea/
