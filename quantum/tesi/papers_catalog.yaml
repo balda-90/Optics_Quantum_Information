@@ -1,0 +1,114 @@
+# Thesis literature map (metadata only — PDFs live locally under data/100_TESI/)
+# Generated from download_papers.ps1 structure.
+
+levels:
+  - id: L0
+    folder: Livello_0_Fondamenta
+    title: Foundations
+    themes: [overview, amplitude_estimation, qml, monte_carlo_derivatives]
+    papers:
+      - title: "Quantum computing for finance — Orus et al. 2019"
+        arxiv: "1807.03890"
+        objective: "Survey QC use cases in finance; map algorithms to problems."
+      - title: "Quantum Computing for Finance — Egger et al. (IBM) 2020"
+        arxiv: "2006.14510"
+        objective: "State-of-the-art and roadmap for near-term finance applications."
+      - title: "Quantum computational finance — Monte Carlo pricing — Rebentrost 2018"
+        arxiv: "1805.00109"
+        objective: "QAE-based speedup for derivative pricing vs classical MC."
+      - title: "Quantum Amplitude Estimation — Brassard et al. 2002"
+        arxiv: "quant-ph/0005055"
+        objective: "Quadratic speedup for estimating amplitudes / probabilities."
+      - title: "Quantum algorithms for ML — Rebentrost et al. 2014"
+        arxiv: "1307.0411"
+        objective: "HHL-style and distance-based QML building blocks."
+
+  - id: L1
+    folder: Livello_1_Survey_Industry
+    title: Industry surveys & policy
+    themes: [readiness, risk_management, post_quantum_timeline, qml_survey]
+    papers:
+      - title: "Applications of QML for Quantitative Finance 2024"
+        arxiv: "2405.10119"
+        objective: "Map QML techniques to quant finance tasks."
+      - title: "FCA — Quantum computing in financial services 2024"
+        url: "fca.org.uk"
+        objective: "Regulatory view on opportunities and risks."
+      - title: "Practical Applications of QC in Finance — MDPI 2025"
+        objective: "Practitioner-oriented application review."
+      - title: "Portfolio optimization to quantum blockchain — 2025"
+        objective: "Broad survey linking optimization and distributed ledgers."
+      - title: "Brief review of QML for financial services — Doosti 2024"
+        arxiv: "2407.12618"
+        objective: "Compact QML taxonomy for finance."
+      - title: "Bank of Finland — Is the financial sector ready? 2025"
+        local: "Livello_1_Survey_Industry/Bank of Finland ... 2025.html"
+        objective: "Industry readiness survey; risks vs opportunities."
+
+  - id: L2A
+    folder: Livello_2A_Portfolio_Optimization
+    title: Portfolio optimization
+    themes: [qubo, vqe, quantum_annealing, decomposition]
+    papers:
+      - title: "Decomposition pipeline for large-scale portfolio optimization — JPMorgan 2025"
+        arxiv: "2409.10301"
+        objective: "Decompose large portfolios for hybrid quantum solvers."
+      - title: "Scaling VQE for Dynamic Portfolio Optimization — BBVA/IBM 2025"
+        arxiv: "2412.19150"
+        objective: "VQE for dynamic constraints and rebalancing."
+      - title: "Multiple Discretization Portfolio Optimization — Hybrid 2025"
+        objective: "Hybrid classical-quantum with discretized weights."
+      - title: "PO-QA Framework — Portfolio Optimization with Quantum Algorithms 2024"
+        arxiv: "2407.19857"
+        objective: "Unified framework for quantum portfolio algorithms."
+      - title: "End-to-End Portfolio Optimization with Quantum Annealing 2025"
+        arxiv: "2504.08843"
+        objective: "QUBO formulation solved via annealing."
+      - title: "Large-scale portfolio optimization on trapped-ion QC — IonQ 2026"
+        arxiv: "2602.23976"
+        objective: "Hardware demonstration at scale."
+
+  - id: L2B
+    folder: Livello_2B_Risk_MonteCarlo_Derivatives
+    title: Risk, Monte Carlo & derivatives
+    themes: [option_pricing, qae, market_risk, counterparty_risk]
+    papers:
+      - title: "Option Pricing using Quantum Computers — Stamatopoulos (JPMorgan) 2020"
+        arxiv: "1905.02666"
+        objective: "QAE for European option pricing under GBM."
+      - title: "Towards Quantum Advantage in Financial Market Risk — Goldman 2022"
+        arxiv: "2111.12509"
+        objective: "Resource estimates for VaR/CVaR with quantum speedup."
+      - title: "Quantum Monte Carlo for financial risk analytics 2024"
+        arxiv: "2404.03035"
+        objective: "End-to-end QMC pipeline for risk metrics."
+      - title: "Quantum Counterparty Credit Risk — Path-Dependent Derivatives 2025"
+        arxiv: "2606.28701"
+        objective: "Credit exposure simulation with quantum acceleration."
+
+  - id: L2C
+    folder: Livello_2C_Quantum_Machine_Learning
+    title: Quantum machine learning
+    themes: [qgnn, fraud_detection]
+    papers:
+      - title: "Financial fraud detection using quantum GNN — Innan 2024"
+        arxiv: "2309.01127"
+        objective: "Graph structure + quantum layers for fraud classification."
+
+  - id: L2D
+    folder: Livello_2D_Post_Quantum_Cryptography
+    title: Post-quantum cryptography
+    themes: [pqc_migration, financial_infrastructure]
+    papers:
+      - title: "Global Roadmaps for Post-Quantum Era in Finance — MDPI 2025"
+        objective: "Migration timelines and standards for finance."
+
+  - id: L3
+    folder: Livello_3_Tesi_Riferimento
+    title: Reference theses
+    themes: [option_pricing, thesis_implementation]
+    papers:
+      - title: "Pricing Options on Quantum Computers — Jauron (Sherbrooke) 2022"
+        objective: "Master's thesis: full option pricing workflow on QC."
+      - title: "Pricing Options on Quantum Computers — Berube (Sherbrooke) 2024"
+        objective: "Extended thesis with improved circuits and benchmarks."

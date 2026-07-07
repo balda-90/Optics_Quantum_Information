@@ -16,6 +16,7 @@ quantum/
 ├── 02_optics/              # Optics
 ├── 03_quantum_mechanics/   # Introduction to Quantum Mechanics
 ├── 04_quantum_electronics/ # Quantum electronics
+├── tesi/                   # Thesis: quantum finance bibliography & scripts
 └── requirements.txt
 ```
 
