@@ -22,6 +22,8 @@ See `papers_catalog.yaml` for titles, arXiv IDs and objectives.
 
 | File | Maps to |
 |------|---------|
+| `papers/` | **25 beginner tutorials — one script per paper** (see `papers/README.md`) |
+| `materialize_paper_tutorials.py` | Regenerate tutorials from embedded content |
 | `00_thesis_literature_map.ipynb` | Interactive overview of catalog + BoF survey |
 | `01_quantum_amplitude_estimation.py` | Brassard QAE; Rebentrost MC speedup |
 | `02_european_option_monte_carlo.py` | Stamatopoulos classical MC baseline |
@@ -32,8 +34,13 @@ See `papers_catalog.yaml` for titles, arXiv IDs and objectives.
 
 ```powershell
 .\.venv-quantum\Scripts\Activate.ps1
+
+# Start with foundations (beginner-friendly, step-by-step prints):
+python quantum/tesi/papers/L0_fondamenta/L0_01_orus_2019.py
+python quantum/tesi/papers/L0_fondamenta/L0_04_brassard_qae_2002.py
+
+# Full index: quantum/tesi/papers/README.md
 jupyter notebook quantum/tesi/00_thesis_literature_map.ipynb
-python quantum/tesi/01_quantum_amplitude_estimation.py
 ```
 
 Plots are saved under each script's `output/` folder.
