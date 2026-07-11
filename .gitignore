@@ -15,8 +15,13 @@ env/
 .env.*
 !.env.example
 
+# === Local-only (RAG assistant, pipelines — keep off GitHub) ===
+/agents/
+/requirements.txt
+/run_*.bat
+
 # === Course material (do NOT publish professors' copyrighted files) ===
-data/
+/data/
 
 # === RAG / vector index artifacts ===
 agents/index/
