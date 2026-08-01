@@ -14,3 +14,8 @@ build the algebraic intuition needed for everything else.
 - Numerically prove that X, Y, Z anticommute ({X,Y}=0, etc.).
 - Pauli eigenvectors as measurement bases (X-basis, Y-basis).
 - Decompose a generic 2x2 unitary matrix into rotations.
+
+## Related notebook
+For a full bra–ket → wave-function → eigenfunction path (more didactic than this
+script), see
+`../03_quantum_mechanics/02_bra_ket_operators_eigenfunctions.ipynb`.

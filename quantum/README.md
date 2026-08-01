@@ -20,8 +20,10 @@ quantum/
 └── requirements.txt
 ```
 
-Each subject folder contains numbered scripts (`01_...`, `02_...`) plus a
-`README.md` that tracks what I learned/implemented each day.
+Each subject folder contains numbered files (`01_...`, `02_...`) plus a
+`README.md` that tracks what I learned/implemented each day. Prefer
+**Jupyter notebooks** (`.ipynb`) when the topic mixes theory and plots; keep
+short `.py` scripts for focused circuit / numerical demos.
 
 ## Setup
 
@@ -40,7 +42,7 @@ pip install -r quantum/requirements.txt
 > `qiskit` is only needed where indicated (e.g. real circuits and the Aer
 > simulator). Scripts that can, fall back to numpy and run without qiskit.
 
-## How to run a script
+## How to run scripts and notebooks
 
 From the project root, with `.venv-quantum` active:
 
@@ -49,9 +51,14 @@ python quantum/01_math_foundations/01_gates_as_unitary_matrices.py
 python quantum/02_optics/01_polarization_as_qubit.py
 python quantum/03_quantum_mechanics/01_bell_state_entanglement.py
 python quantum/04_quantum_electronics/01_rabi_oscillations.py
+
+# Notebooks (theory + visualization)
+jupyter notebook quantum/03_quantum_mechanics/02_bra_ket_operators_eigenfunctions.ipynb
+jupyter notebook quantum/04_quantum_electronics/02_semiconductor_states_and_dos.ipynb
 ```
 
-Plots are saved in the subject's `output/` subfolder.
+Script plots are saved in the subject's `output/` subfolder; notebook figures
+render inline.
 
 > On Windows, if the Qiskit circuit drawing shows odd characters, set
 > `PYTHONIOENCODING=utf-8` before running (the scripts already try to do this).
