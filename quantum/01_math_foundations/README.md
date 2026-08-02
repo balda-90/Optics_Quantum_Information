@@ -4,11 +4,13 @@ The bridge between this subject and quantum computing is direct: **states =
 vectors**, **gates = unitary matrices**, **measurements = projections**. Here I
 build the algebraic intuition needed for everything else.
 
+Prefer **Jupyter notebooks** for theory + runnable checks.
+
 ## Log
 
-| Date       | Script                              | What I did |
-|------------|-------------------------------------|------------|
-| 2026-07-04 | `01_gates_as_unitary_matrices.py`   | Verified unitarity of the gates (X, Y, Z, H), Pauli eigenvalues, tensor product, and superposition with Hadamard. |
+| Date       | File                                      | What I did |
+|------------|-------------------------------------------|------------|
+| 2026-07-04 | `01_gates_as_unitary_matrices.ipynb`      | Verified unitarity of the gates (X, Y, Z, H), Pauli eigenvalues, tensor product, and superposition with Hadamard. (Converted from `.py` on 2026-08-02.) |
 
 ## Next steps
 - Numerically prove that X, Y, Z anticommute ({X,Y}=0, etc.).
@@ -16,6 +18,5 @@ build the algebraic intuition needed for everything else.
 - Decompose a generic 2x2 unitary matrix into rotations.
 
 ## Related notebook
-For a full bra–ket → wave-function → eigenfunction path (more didactic than this
-script), see
+For a full bra–ket → wave-function → eigenfunction path, see
 `../03_quantum_mechanics/02_bra_ket_operators_eigenfunctions.ipynb`.

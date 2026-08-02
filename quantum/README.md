@@ -42,23 +42,22 @@ pip install -r quantum/requirements.txt
 > `qiskit` is only needed where indicated (e.g. real circuits and the Aer
 > simulator). Scripts that can, fall back to numpy and run without qiskit.
 
-## How to run scripts and notebooks
+## How to run notebooks
 
 From the project root, with `.venv-quantum` active:
 
 ```powershell
-python quantum/01_math_foundations/01_gates_as_unitary_matrices.py
-python quantum/02_optics/01_polarization_as_qubit.py
-python quantum/03_quantum_mechanics/01_bell_state_entanglement.py
-python quantum/04_quantum_electronics/01_rabi_oscillations.py
-
-# Notebooks (theory + visualization)
+jupyter notebook quantum/01_math_foundations/01_gates_as_unitary_matrices.ipynb
+jupyter notebook quantum/02_optics/01_polarization_as_qubit.ipynb
+jupyter notebook quantum/03_quantum_mechanics/01_bell_state_entanglement.ipynb
 jupyter notebook quantum/03_quantum_mechanics/02_bra_ket_operators_eigenfunctions.ipynb
+jupyter notebook quantum/04_quantum_electronics/01_rabi_oscillations.ipynb
 jupyter notebook quantum/04_quantum_electronics/02_semiconductor_states_and_dos.ipynb
 ```
 
-Script plots are saved in the subject's `output/` subfolder; notebook figures
-render inline.
+Figures render inline in the notebooks. Shared helpers live in `_common/`
+(still plain Python modules). Thesis paper tutorials under `tesi/papers/` remain
+short `.py` scripts generated from the catalog.
 
 > On Windows, if the Qiskit circuit drawing shows odd characters, set
 > `PYTHONIOENCODING=utf-8` before running (the scripts already try to do this).
@@ -66,9 +65,9 @@ render inline.
 ## "One commit a day" workflow
 
 1. Pick the subject of the day.
-2. Create a new numbered script (e.g. `02_...`) starting from the "Next step"
-   suggested at the bottom of the previous script.
-3. Run it and check the output.
+2. Create a new numbered notebook (e.g. `02_....ipynb`) starting from the
+   "Next step" suggested at the bottom of the previous notebook.
+3. Run all cells and check the output.
 4. Update the subject's `README.md` with a line about the work done.
 5. Commit with a clear message, for example:
 
