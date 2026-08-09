@@ -29,7 +29,12 @@ See `papers_catalog.yaml` for titles, arXiv IDs and objectives.
 | `02_european_option_monte_carlo.py` | Stamatopoulos classical MC baseline |
 | `03_portfolio_optimization_qubo.py` | Level 2A portfolio / QUBO |
 | `04_industry_survey_themes.py` | Bank of Finland 2025 themes |
-| `05_var_with_amplitude_estimation.ipynb` | **VaR with Amplitude Estimation** — portfolio P&L, classical quantile, CDF-as-amplitude, ideal QAE vs MC, binary-search VaR, optional Qiskit Bernoulli AE |
+
+Related paper-study notebook (lives under `../00_Paper_study/`):
+
+| File | Maps to |
+|------|---------|
+| `../00_Paper_study/03_var_with_amplitude_estimation.ipynb` | **VaR with Amplitude Estimation** — portfolio P&L, classical quantile, CDF-as-amplitude, ideal QAE vs MC, binary-search VaR, optional Qiskit Bernoulli AE |
 
 ## Run
 
@@ -42,7 +47,7 @@ python quantum/tesi/papers/L0_fondamenta/L0_04_brassard_qae_2002.py
 
 # Full index: quantum/tesi/papers/README.md
 jupyter notebook quantum/tesi/00_thesis_literature_map.ipynb
-jupyter notebook quantum/tesi/05_var_with_amplitude_estimation.ipynb
+jupyter notebook quantum/00_Paper_study/03_var_with_amplitude_estimation.ipynb
 ```
 
 Plots are saved under each script's `output/` folder.

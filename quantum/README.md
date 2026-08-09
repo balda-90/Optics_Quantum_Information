@@ -12,6 +12,7 @@ Repo: https://github.com/balda-90/Optics_Quantum_Information
 ```
 quantum/
 ├── _common/                # shared utilities (algebra, Bloch sphere, plotting)
+├── 00_Paper_study/         # Paper-study / exploratory notebooks (AE, VaR, …)
 ├── 01_math_foundations/    # Mathematical foundations (algebra & calculus)
 ├── 02_optics/              # Optics
 ├── 03_quantum_mechanics/   # Introduction to Quantum Mechanics
@@ -47,6 +48,7 @@ pip install -r quantum/requirements.txt
 From the project root, with `.venv-quantum` active:
 
 ```powershell
+jupyter notebook quantum/00_Paper_study/03_var_with_amplitude_estimation.ipynb
 jupyter notebook quantum/01_math_foundations/01_gates_as_unitary_matrices.ipynb
 jupyter notebook quantum/02_optics/01_polarization_as_qubit.ipynb
 jupyter notebook quantum/03_quantum_mechanics/01_bell_state_entanglement.ipynb
