@@ -1,7 +1,7 @@
 # 00 — Paper study
 
 Sandbox / paper-study notebooks: exploratory demos tied to thesis and course
-topics (Amplitude Estimation, VaR, wave packets, circuits, …). Prefer
+topics (Amplitude Estimation, VaR, credit risk, wave packets, circuits, …). Prefer
 **Jupyter notebooks** here.
 
 ## Log
@@ -11,10 +11,12 @@ topics (Amplitude Estimation, VaR, wave packets, circuits, …). Prefer
 | 2026-08-02 | `01_wavepackets_and_rabi.ipynb`              | Wave packet, free propagation, Rabi playground (from Matrixandode). |
 | 2026-08-xx | `02_amplitude_estimation.ipynb`              | Step-by-step Amplitude Estimation (operators A and Q). |
 | 2026-08-09 | `03_var_with_amplitude_estimation.ipynb`     | Value at Risk via Amplitude Estimation: portfolio P&L, CDF-as-amplitude, ideal QAE vs MC, binary-search VaR, optional Qiskit Bernoulli AE. |
+| 2026-08-11 | `04_credit_at_risk.ipynb`                    | Credit VaR for correlated assets: latent factor Z, formula (11), building operator A = U + S + C, Ry encoding of default probs, MC twin of the circuit + binary-search VaR. |
 
 ## Run
 
 ```powershell
-jupyter notebook quantum/00_Paper_study/03_var_with_amplitude_estimation.ipynb
 jupyter notebook quantum/00_Paper_study/02_amplitude_estimation.ipynb
+jupyter notebook quantum/00_Paper_study/03_var_with_amplitude_estimation.ipynb
+jupyter notebook quantum/00_Paper_study/04_credit_at_risk.ipynb
 ```
