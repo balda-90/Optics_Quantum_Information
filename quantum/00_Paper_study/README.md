@@ -14,6 +14,7 @@ Prefer **Jupyter notebooks** here.
 | 2026-08-11 | `04_credit_at_risk.ipynb`                    | Credit VaR for correlated assets: latent factor Z, formula (11), building operator A = U + S + C, Ry encoding of default probs, MC twin of the circuit + binary-search VaR. |
 | 2026-08-12 | `05_quantum_ml_advantage.ipynb`              | Classical vs hybrid vs quantum ML: scorecard, moons classification, RBF vs ZZ quantum-inspired kernel, toy VQC, scaling cartoons, barren plateaus. |
 | 2026-08-13 | `06_portfolio_optimization_mc_vs_quantum.ipynb` | €50k book (RGTI, IONQ, QNTM.MI, RACE.MI, LEGN, TTWO, LGND, SMR): Monte Carlo Markowitz vs QUBO/QAOA, integer lots, honest n=8 scaling. |
+| 2026-08-17 | `06_portfolio_optimization_mc_vs_quantum.ipynb` | Fair Hamming-K random-search twin vs QAOA shots; 70/30 out-of-sample frozen-ticket P&L (max DD, realized Sharpe); shot Hamming-weight diagnostic. |
 
 ## Run
 
