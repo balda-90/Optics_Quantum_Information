@@ -9,8 +9,10 @@ actually build and control qubits. Prefer **notebooks** for theory + plots.
 |------------|--------------------------------------------|------------|
 | 2026-07-04 | `01_rabi_oscillations.ipynb`               | Integrated the Schrodinger equation of a driven two-level system; Rabi oscillations on and off resonance. (Converted from `.py` on 2026-08-02.) |
 | 2026-07-19 | `02_semiconductor_states_and_dos.ipynb`     | Guided notebook from semiconductor lasers to the density of states, Fermi–Dirac, 2D quantum wells and energy paraboloids. |
+| 2026-10-11 | `03_course_recap.py`                       | Public recap of the whole course after the May–September 2026 lectures and the updated local archive: Rabi, rate equations, semiconductor inversion, 1D photonic bands, SPP dispersion, quantum-dot spectrum. |
 
 ## Next steps
 - Add decay (Lindblad master equation, T1/T2).
 - Pi and pi/2 pulses as gates (X and sqrt(X)).
 - Absorption spectrum and line broadening.
+- Turn the recap rate-equation demo into a pump–output (L–I) curve.
