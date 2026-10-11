@@ -55,7 +55,7 @@ jupyter notebook quantum/03_quantum_mechanics/01_bell_state_entanglement.ipynb
 jupyter notebook quantum/03_quantum_mechanics/02_bra_ket_operators_eigenfunctions.ipynb
 jupyter notebook quantum/04_quantum_electronics/01_rabi_oscillations.ipynb
 jupyter notebook quantum/04_quantum_electronics/02_semiconductor_states_and_dos.ipynb
-python "quantum/04_quantum_electronics/03_course_recap.py"
+jupyter notebook quantum/04_quantum_electronics/03_course_recap.ipynb
 ```
 
 Figures render inline in the notebooks. Shared helpers live in `_common/`
