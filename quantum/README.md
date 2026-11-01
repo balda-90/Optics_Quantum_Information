@@ -7,6 +7,25 @@ day — to build a public portfolio and my personal brand.
 
 Repo: https://github.com/balda-90/Optics_Quantum_Information
 
+## Master modules → this repo
+
+Public **coding journal**, not an archive of lectures. Professor slides, Moodle
+dumps and recordings stay in local `data/` and are gitignored.
+
+| Master module | Folder here | Status |
+|---|---|---|
+| 4. Algebra and calculus (Carillo) | `01_math_foundations/` | gates as unitaries |
+| 1. Optics (Bertolotti) | `02_optics/` | polarisation qubit, Maxwell / interfaces |
+| 3. QM intro (Centini) | `03_quantum_mechanics/` | Bell, bra–ket, wells |
+| 3. Laser & quantum electronics (Sibilia) | `04_quantum_electronics/` | Rabi, DOS, recap, cavity / pulses |
+| 6. Quantum information I (Bovino) | `05_Basics of quantum information/` | circuits, teleportation, density matrices |
+| 8. Thermal radiation & IR signature (Li Voti) | `06_radiazione_termica_segnatura_IR/` | conduction → IR signature |
+| 2. Nonlinear optics (Wabnitz) | `07_nonlinear_optics/` | SHG, phase matching, $n_2$ |
+| Thesis / quantum finance | `tesi/` | bibliography map + paper tutorials |
+
+Modules not started yet (cryptography, QI II, quantum computing, devices,
+optical transmission) will get a folder when the lectures begin.
+
 ## Structure
 
 ```
@@ -17,6 +36,9 @@ quantum/
 ├── 02_optics/              # Optics
 ├── 03_quantum_mechanics/   # Introduction to Quantum Mechanics
 ├── 04_quantum_electronics/ # Quantum electronics
+├── 05_Basics of quantum information/
+├── 06_radiazione_termica_segnatura_IR/
+├── 07_nonlinear_optics/    # χ² / χ³ recap
 ├── tesi/                   # Thesis: quantum finance bibliography & scripts
 └── requirements.txt
 ```
@@ -56,6 +78,11 @@ jupyter notebook quantum/03_quantum_mechanics/02_bra_ket_operators_eigenfunction
 jupyter notebook quantum/04_quantum_electronics/01_rabi_oscillations.ipynb
 jupyter notebook quantum/04_quantum_electronics/02_semiconductor_states_and_dos.ipynb
 jupyter notebook quantum/04_quantum_electronics/03_course_recap.ipynb
+jupyter notebook quantum/04_quantum_electronics/04_cavity_qswitch_modelock.ipynb
+jupyter notebook "quantum/05_Basics of quantum information/01_circuiti_passo_passo.ipynb"
+jupyter notebook "quantum/05_Basics of quantum information/02_densita_bloch_tensori.ipynb"
+jupyter notebook quantum/06_radiazione_termica_segnatura_IR/01_lezione_conduzione_diffusione.ipynb
+jupyter notebook quantum/07_nonlinear_optics/01_shg_phasematch_n2.ipynb
 ```
 
 Figures render inline in the notebooks. Shared helpers live in `_common/`
