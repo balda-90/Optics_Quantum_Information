@@ -14,13 +14,13 @@ dumps and recordings stay in local `data/` and are gitignored.
 
 | Master module | Folder here | Status |
 |---|---|---|
-| 4. Algebra and calculus (Carillo) | `01_math_foundations/` | gates as unitaries |
-| 1. Optics (Bertolotti) | `02_optics/` | polarisation qubit, Maxwell / interfaces |
+| 4. Algebra and calculus (Carillo) | `01_math_foundations/` | gates as unitaries; Frobenius / perturbation |
+| 1. Optics (Bertolotti) | `02_optics/` | polarisation qubit, Maxwell / interfaces, Mach–Zehnder |
 | 3. QM intro (Centini) | `03_quantum_mechanics/` | Bell, bra–ket, wells |
-| 3. Laser & quantum electronics (Sibilia) | `04_quantum_electronics/` | Rabi, DOS, recap, cavity / pulses |
+| 3. Laser & quantum electronics (Sibilia) | `04_quantum_electronics/` | Rabi, DOS, recap, cavity / pulses, Lindblad T1/T2 |
 | 6. Quantum information I (Bovino) | `05_Basics of quantum information/` | circuits, teleportation, density matrices |
 | 8. Thermal radiation & IR signature (Li Voti) | `06_radiazione_termica_segnatura_IR/` | conduction → IR signature |
-| 2. Nonlinear optics (Wabnitz) | `07_nonlinear_optics/` | SHG, phase matching, $n_2$ |
+| 2. Nonlinear optics (Wabnitz) | `07_nonlinear_optics/` | SHG, $n_2$, OPA / DFG / FWM, GVD / SPM / soliton |
 | Thesis / quantum finance | `tesi/` | bibliography map + paper tutorials |
 
 Modules not started yet (cryptography, QI II, quantum computing, devices,
@@ -72,17 +72,22 @@ From the project root, with `.venv-quantum` active:
 ```powershell
 jupyter notebook quantum/00_Paper_study/03_var_with_amplitude_estimation.ipynb
 jupyter notebook quantum/01_math_foundations/01_gates_as_unitary_matrices.ipynb
+jupyter notebook quantum/01_math_foundations/02_frobenius_perturbation.ipynb
 jupyter notebook quantum/02_optics/01_polarization_as_qubit.ipynb
+jupyter notebook quantum/02_optics/03_beamsplitter_machzehnder.ipynb
 jupyter notebook quantum/03_quantum_mechanics/01_bell_state_entanglement.ipynb
 jupyter notebook quantum/03_quantum_mechanics/02_bra_ket_operators_eigenfunctions.ipynb
 jupyter notebook quantum/04_quantum_electronics/01_rabi_oscillations.ipynb
 jupyter notebook quantum/04_quantum_electronics/02_semiconductor_states_and_dos.ipynb
 jupyter notebook quantum/04_quantum_electronics/03_course_recap.ipynb
 jupyter notebook quantum/04_quantum_electronics/04_cavity_qswitch_modelock.ipynb
+jupyter notebook quantum/04_quantum_electronics/05_lindblad_t1_t2.ipynb
 jupyter notebook "quantum/05_Basics of quantum information/01_circuiti_passo_passo.ipynb"
 jupyter notebook "quantum/05_Basics of quantum information/02_densita_bloch_tensori.ipynb"
 jupyter notebook quantum/06_radiazione_termica_segnatura_IR/01_lezione_conduzione_diffusione.ipynb
 jupyter notebook quantum/07_nonlinear_optics/01_shg_phasematch_n2.ipynb
+jupyter notebook quantum/07_nonlinear_optics/02_opa_dfg_fwm.ipynb
+jupyter notebook quantum/07_nonlinear_optics/03_gvd_spm_solitone.ipynb
 ```
 
 Figures render inline in the notebooks. Shared helpers live in `_common/`
